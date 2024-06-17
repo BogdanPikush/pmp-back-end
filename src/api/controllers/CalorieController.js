@@ -26,7 +26,7 @@ class CalorieController {
   async calories (req, res) {
     try {
       const { email, day } = req.query; 
-      console.log(email);
+
       const startDate = new Date(day);
       startDate.setHours(0, 0, 0, 0);
       const endDate = new Date(day);

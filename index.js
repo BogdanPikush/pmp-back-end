@@ -7,6 +7,7 @@ import mongoose from 'mongoose';
 
 import AuthRouter from "./src/api/routes/AuthRoute.js";
 import CalorieRouter from "./src/api/routes/CalorieRoute.js";
+import UserRouter from "./src/api/routes/UserRoute.js";
 
 await mongoose
   .connect(process.env.URL_DB, {
@@ -23,6 +24,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api", AuthRouter);
 app.use("/api", CalorieRouter);
+app.use("/api", UserRouter);
 
 
 app.listen(process.env.PORT, () => {
